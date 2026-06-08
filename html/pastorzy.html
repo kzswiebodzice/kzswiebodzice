@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>
+        ChCM24 kzswiebodzice.pl
+    </title>
+    </head>
+    <style>
+        #powitanie
+        {
+            height: 40vh;
+            background-image: url(../img/bannerTloLisc.jpg);
+        }
+    </style>
+<body>
+    <section id="powitanie">
+        <header>
+            <div id="logo">
+                <a href="../index.html"><img src="../img/logo.jpg" alt="logo" id="logoKZHeader"></a>
+                <p id="adresPodLogo" style="margin-top: 8px;">ul. Wiejska 24, 58-160 Świebodzice</p>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="dropdown">
+                        <a href="../index.html" class="jestesNaTejStronie">poznaj nas</a>
+                        <ul class="submenu">
+                            <li><a href="pastorzy.html" class="jestesNaTejStronie">pastorzy</a></li>
+                            <li><a href="historia.html">historia budynku</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="jakdzialamy.html">jak działamy</a>
+                <a href="counas.html">co u nas</a>
+                <a href="">wsparcie</a>
+                <a href="">kontakt</a>
+            </nav>
+        </header>
+    </section>
+
+    <main>
+        <div class="dwaElementy">
+            <div class="elementPolowa">
+                <img src="../img/pastorzy.jpg" alt="Pastorzy naszego Kościoła">
+            </div>
+
+            <div class="elementPolowa">
+                <h3>Pastorzy</h3>
+                <h2>Zdzisław i Lucyna Niemiec</h2>
+                <p>Pastorzy Kościoła w&nbsp;Świebodzicach od 2008 roku.<br>
+                W&nbsp;pełni oddani  służbie Bogu i&nbsp;ludziom.<br>
+                Razem tworzą autentyczne, pełne ciepła i&nbsp;troski przywództwo. Swoje życie opierają na prawdzie Pisma Świętego i&nbsp;relacji z&nbsp;Bogiem, Jezusem i&nbsp;Duchem Świętym. Ich życie jest świadectwem Bożego działania. Mają ogromne serce dla ludzi, zawsze gotowi do modlitwy i&nbsp;pomocy. Prowadzą kościół z&nbsp;pokorą i&nbsp;zaangażowaniem — obecni w&nbsp;życiu wspólnoty na co dzień. Prywatnie ludzie pełni życzliwości i&nbsp;troski o&nbsp;innych. Prowadzą otwarty dom, słyną z&nbsp;gościnności i&nbsp;dobrej kuchni. Są dziadkami sześciorga wnucząt i&nbsp;rodzicami trzech dorosłych synów, którzy całymi rodzinami służą Bogu jako pastorzy i&nbsp;liderzy w&nbsp;kościołach w&nbsp;Warszawie.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Chrześcijańskie Centrum Misja24<br>Kościół Zielonoświątkowy<br>58-160 Świebodzice, ul. Wiejska 24</p>
+        <br>
+        <p style="text-align: right;">
+            &copy; 2026 Filip Godlewski
+            <br>
+            Zmień tryb (jasny/ciemny): 
+            <button id="trybyPrzycisk">
+                <img src="../img/ksiezyc.png" alt="ksiezyc" id="ksiezyc">
+                <img src="../img/slonce.png" alt="slonce" id="slonce">
+            </button>
+        </p>
+    </footer>
+
+    <script>
+        const button = document.getElementById("trybyPrzycisk");
+
+        button.addEventListener("click", () => {
+            document.body.classList.toggle("ciemny");
+        });
+    </script>
+
+</body>
+</html>
+
+<!-- h1 jest główne, cieńkie; h2 zwyczajne h3 to caps kolorem 53678c; linki są czarne; paragrafy są czarne; każda sekcja musi mieć id, dodatkowo wTakiejPisowni; klasa .tekstZNaglowkiem jest dla tekstów z nagłówkiem h2><br><p -->

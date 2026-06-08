@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>
+        ChCM24 kzswiebodzice.pl
+    </title>
+    </head>
+    <style>
+        #powitanie
+        {
+            height: 40vh;
+            background-image: url(../img/bannerTloKosciol.jpg);
+        }
+    </style>
+<body>
+    <section id="powitanie">
+        <header>
+            <div id="logo">
+                <a href="../index.html"><img src="../img/logo.jpg" alt="logo" id="logoKZHeader"></a>
+                <p id="adresPodLogo" style="margin-top: 8px;">ul. Wiejska 24, 58-160 Świebodzice</p>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="dropdown">
+                        <a href="../index.html">poznaj nas</a>
+                        <ul class="submenu">
+                            <li><a href="pastorzy.html">pastorzy</a></li>
+                            <li><a href="historia.html">historia budynku</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="jakdzialamy.html">jak działamy</a>
+                <a href="counas.html" class="jestesNaTejStronie">co u nas</a>
+                <a href="">wsparcie</a>
+                <a href="">kontakt</a>
+            </nav>
+        </header>
+    </section>
+
+    <main>
+        <div class="akapitTekstu">
+            <iframe id="kalendarz" src="https://calendar.google.com/calendar/embed?height=800&wkst=2&ctz=Europe%2FWarsaw&showPrint=0&showTitle=0&showCalendars=0&showTz=0&src=a2FsZW5kYXJ6a3pzQGdtYWlsLmNvbQ&color=%23d50000"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>Chrześcijańskie Centrum Misja24<br>Kościół Zielonoświątkowy<br>58-160 Świebodzice, ul. Wiejska 24</p>
+        <br>
+        <p style="text-align: right;">
+            &copy; 2026 Filip Godlewski
+            <br>
+            Zmień tryb (jasny/ciemny): 
+            <button id="trybyPrzycisk">
+                <img src="../img/ksiezyc.png" alt="ksiezyc" id="ksiezyc">
+                <img src="../img/slonce.png" alt="slonce" id="slonce">
+            </button>
+        </p>
+    </footer>
+
+    <script>
+        const button = document.getElementById("trybyPrzycisk");
+
+        button.addEventListener("click", () => {
+            document.body.classList.toggle("ciemny");
+        });
+    </script>
+
+</body>
+</html>
+
+<!-- h1 jest główne, cieńkie; h2 zwyczajne h3 to caps kolorem 53678c; linki są czarne; paragrafy są czarne; każda sekcja musi mieć id, dodatkowo wTakiejPisowni; klasa .tekstZNaglowkiem jest dla tekstów z nagłówkiem h2><br><p -->

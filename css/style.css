@@ -1,0 +1,370 @@
+/* ---------- strona ---------- */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; /* Lato */
+}
+
+/* ---------- zmiana trybu ---------- */
+
+:root
+{
+    --kolorTla: #ffffff; /* kolor tła dla trybu jasnego */
+    --kolorTekstu: #000000; /* kolor tekstu dla trybu jasnego */
+    --kolorStopki: #222222; /* kolor tła stopki dla trybu jasnego */
+    --trybyPrzyciskS: none; /* słońce się nie wyświetla */
+    --trybyPrzyciskK: block; /* księżyc się wyświetla */
+}
+
+html, body
+{
+    background-color: var(--kolorTla); /* kolot tła biały dla trybu jasnego ciemny dla trybu ciemnego */
+    color: var(--kolorTekstu); /* kolot tekstu biały dla trybu jasnego ciemny dla trybu ciemnego */
+    height: 100%;
+    transition: background-color 300ms ease, color 300ms ease;
+}
+
+body.ciemny
+{
+    --kolorTla: #222222; /* ciemny, nie czarny kolor tła dla trybu ciemnego */
+    --kolorTekstu: #e6e6e6; /* biały kolor tekstu */
+    --kolorStopki: #313e57;
+    --trybyPrzyciskS: block; /* słońce się wyświetla */
+    --trybyPrzyciskK: none; /* księżyc się nie wyświetla */
+}
+
+/* ---------- tekst ---------- */
+
+h1
+{
+    font-size: clamp(1.2rem, 3vw, 3.5rem);
+    font-weight: 300; /* cieńki */
+    color: var(--kolorTekstu);
+}
+
+h2
+{
+    color: var(--kolorTekstu);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3
+{
+    color: #53678c;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+p
+{
+    line-height: 1.8;
+    color: var(--kolorTekstu);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+a
+{
+    text-decoration: none; /* bez podkreślenia */
+    color: var(--kolorTekstu);
+    transition: color 200ms ease; /* przejście do niebieskiego koloru na :hover */
+}
+
+a:hover 
+{
+    color: #53678c;
+    text-decoration: underline;
+}
+
+a#poznajNas
+{
+    text-transform: none; 
+    text-decoration: none;
+}
+
+::selection /* zaznaczanie tekstu za pomocą myszki */
+{
+    color: var(--kolorTla);
+    background-color: #53678c;
+}
+
+/* ---------- pasek menu ---------- */
+
+#powitanie /* to co widzimy po wejściu na stronę kościoła */
+{
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0% 10% 0% 30%;
+}
+
+#banner h1 {
+    color: white;
+}
+
+#logo
+{
+    left: 80px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logoKZHeader /* zdjęcie, logo kościoła */
+{
+    width: clamp(100px, 12vw, 250px); 
+    height: auto;
+}
+
+#adresPodLogo /* adres budynku */
+{
+    color: #ffffff;
+    font-size: 1rem;
+    width: 100%;
+    font-size: clamp(8px, 0.8vw, 14px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+nav
+{
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav a
+{
+    text-transform: uppercase; /* duże litery dla menu */
+    color: #ffffff;
+}
+
+/* ---------- menu wysuwane ---------- */
+
+.menu
+{
+    list-style: none;
+    display: flex;
+}
+
+.menu li
+{
+    position: relative;
+}
+
+.menu a
+{
+    padding: 15px 0px;
+    display: block;
+}
+
+.menu a:hover
+{
+    color: #53678c;
+    text-decoration: underline;
+}
+
+.submenu
+{
+    left: 0;
+    top: 100%;
+    padding: 0;
+    min-width: 200px;
+    border-radius: 5%;
+    background: rgba(83,103,140,0.5);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    display: none;
+    list-style: none;
+    position: absolute;
+}
+
+.submenu li a
+{
+    padding: 1rem;
+    transition: color 200ms ease;
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.submenu li a:hover
+{
+    padding: 1rem;
+    color: #1f3152;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.dropdown:hover .submenu
+{
+    display: block;
+}
+
+a.jestesNaTejStronie
+{
+    text-decoration: underline !important;
+}
+
+/* ---------- banner ---------- */
+
+#banner
+{
+    min-height: calc(100vh - 80px);
+    flex: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 55vh 10% 0% 10%;
+}
+
+/* ---------- przycisk ---------- */
+
+#trybyPrzycisk /* ciemny/jasny motyw */
+{ 
+    all: unset;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 0.1em;
+}
+
+#trybyPrzycisk img
+{
+    height: 30px;
+}
+
+#slonce
+{
+    display: var(--trybyPrzyciskS);
+}
+
+#ksiezyc
+{
+    display: var(--trybyPrzyciskK);
+}
+
+/* ---------- stopka ---------- */
+
+footer
+{
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: row;
+    background-color: #222222;
+    justify-content: space-between;
+    background-color: var(--kolorStopki);
+}
+
+footer p
+{
+    color: #ffffff;
+}
+
+/* ---------- treść ---------- */
+
+.akapitTekstu
+{
+    width: 100%;
+    padding: 0% 10% 5% 10%;
+    background-color: var(--kolorTla);
+}
+
+.akapitTekstu:first-of-type
+{
+    padding: 5% 10% 5% 10%;
+}
+
+.dwaElementy
+{
+    gap: 5%;
+    width: 100%;
+    padding: 0% 10% 5% 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: center;
+    min-height: clamp(300px, 50vh, 600px);
+    background-color: var(--kolorTla);
+}
+
+.dwaElementy:first-of-type
+{
+    padding: 5% 10% 5% 10%;
+}
+
+.elementPolowa
+{
+    flex: 1;
+    line-height: 1.5;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.elementPolowa p
+{
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.elementPolowa img
+{ 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+#kalendarz
+{
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 80vh;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1200px)
+{
+    .dwaElementy
+    {
+        padding: 0% 5% 5% 5%;
+        flex-direction: column;
+    }
+
+    .dwaElementy > .elementPolowa:first-child
+    {
+        padding-bottom: 5%;
+    }
+
+    .akapitTekstu
+    {
+        padding: 0% 5% 5% 5%;
+    }
+
+    .akapitTekstu:first-child
+    {
+        padding: 5% 5% 5% 5%;
+    }
+}
