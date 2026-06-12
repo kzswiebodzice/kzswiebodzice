@@ -366,7 +366,6 @@ footer p
     padding: 0% 15% 5% 15%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* min-height: clamp(300px, 50vh, 600px); */
     background-color: var(--kolorTla);
     gap: clamp(10px, 2vw, 30px);
 }
@@ -382,7 +381,6 @@ footer p
     overflow-wrap: break-word;
     word-break: break-word;
     background-color: var(--kolorTla);
-    
 }
 
 .sociale img
