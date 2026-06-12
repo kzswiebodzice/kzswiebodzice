@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Lato', sans-serif; /* Lato */
 }
 
@@ -55,7 +56,7 @@ h3
 {
     color: #53678c;
     text-transform: uppercase;
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 p
@@ -78,10 +79,28 @@ a:hover
     text-decoration: underline;
 }
 
+a img:hover
+{
+    filter: brightness(0.8);
+}
+
 a#poznajNas
 {
     text-transform: none; 
     text-decoration: none;
+}
+
+.kopiuj
+{
+    color: var(--kolorTekstu);
+    transition: color 200ms ease; /* przejście do niebieskiego koloru na :hover */
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.kopiuj:hover
+{
+    color: #53678c;
 }
 
 ::selection /* zaznaczanie tekstu za pomocą myszki */
@@ -249,7 +268,7 @@ a.jestesNaTejStronie
 
 #trybyPrzycisk img
 {
-    height: 30px;
+    height: clamp(15px, 3vw, 20px);
 }
 
 #slonce
@@ -277,6 +296,12 @@ footer
 footer p
 {
     color: #ffffff;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+#stopkaPrawaStrona
+{
+    text-align: right;
 }
 
 /* ---------- treść ---------- */
@@ -286,11 +311,9 @@ footer p
     width: 100%;
     padding: 0% 10% 5% 10%;
     background-color: var(--kolorTla);
-}
-
-.akapitTekstu:first-of-type
-{
-    padding: 5% 10% 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .dwaElementy
@@ -306,7 +329,7 @@ footer p
     background-color: var(--kolorTla);
 }
 
-.dwaElementy:first-of-type
+.akapitTekstu:first-of-type, .dwaElementy:first-of-type
 {
     padding: 5% 10% 5% 10%;
 }
@@ -318,7 +341,7 @@ footer p
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .elementPolowa p
@@ -332,6 +355,39 @@ footer p
     height: auto;
     object-fit: cover;
     display: block;
+    transition: filter 0.3s ease;
+}
+
+.sociale
+{
+    width: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0% 15% 5% 15%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* min-height: clamp(300px, 50vh, 600px); */
+    background-color: var(--kolorTla);
+    gap: clamp(10px, 2vw, 30px);
+}
+
+.socialebox
+{
+    min-width: 0;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    
+}
+
+.sociale img
+{
+    width: 180px;
+    object-fit: contain;
 }
 
 #kalendarz
@@ -366,5 +422,20 @@ footer p
     .akapitTekstu:first-child
     {
         padding: 5% 5% 5% 5%;
+    }
+}
+
+@media (max-width: 720px)
+{
+    footer
+    {
+        padding: 5% 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #stopkaPrawaStrona
+    {
+        text-align: left;
     }
 }

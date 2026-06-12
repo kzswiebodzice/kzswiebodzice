@@ -7,17 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <script src="../js/main.js" defer></script>
     <title>
-        ChCM24 kzswiebodzice.pl
+        ChCM24 | Historia budynku
     </title>
-    </head>
-    <style>
-        #powitanie
-        {
-            height: 40vh;
-            background-image: url(../img/bannerTloKosciol.jpg);
-        }
-    </style>
+</head>
+
+<style>
+    #powitanie
+    {
+        height: 40vh;
+        background-image: url(../img/bannerTloKosciol.jpg);
+    }
+</style>
+
 <body>
     <section id="powitanie">
         <header>
@@ -28,17 +32,18 @@
             <nav>
                 <ul class="menu">
                     <li class="dropdown">
-                        <a href="../index.html" class="jestesNaTejStronie">poznaj nas</a>
+                        <a href="../index.html" class="jestesNaTejStronie">Poznaj nas</a>
                         <ul class="submenu">
-                            <li><a href="pastorzy.html">pastorzy</a></li>
-                            <li><a href="historia.html" class="jestesNaTejStronie">historia budynku</a></li>
+                            <li><a href="pastorzy.html">Pastorzy</a></li>
+                            <li><a href="historia.html" class="jestesNaTejStronie">Historia budynku</a></li>
                         </ul>
                     </li>
                 </ul>
-                <a href="jakdzialamy.html">jak działamy</a>
-                <a href="counas.html">co u nas</a>
-                <a href="">wsparcie</a>
-                <a href="">kontakt</a>
+                <a href="jakdzialamy.html">Jak działamy</a>
+                <a href="counas.html">Co u nas</a>
+                <a href="start.html">Start z Bogiem</a>
+                <a href="wsparcie.html">Wsparcie</a>
+                <a href="kontakt.html">Kontakt</a>
             </nav>
         </header>
     </section>
@@ -91,7 +96,7 @@
     <footer>
         <p>Chrześcijańskie Centrum Misja24<br>Kościół Zielonoświątkowy<br>58-160 Świebodzice, ul. Wiejska 24</p>
         <br>
-        <p style="text-align: right;">
+        <p id="stopkaPrawaStrona">
             &copy; 2026 Filip Godlewski
             <br>
             Zmień tryb (jasny/ciemny): 
@@ -101,15 +106,6 @@
             </button>
         </p>
     </footer>
-
-    <script>
-        const button = document.getElementById("trybyPrzycisk");
-
-        button.addEventListener("click", () => {
-            document.body.classList.toggle("ciemny");
-        });
-    </script>
-
 </body>
 </html>
 

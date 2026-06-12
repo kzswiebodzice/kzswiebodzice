@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <script src="../js/main.js" defer></script>
     <title>
-        ChCM24 | Pastorzy
+        ChCM24 | Wsparcie
     </title>
 </head>
 
@@ -32,9 +32,9 @@
             <nav>
                 <ul class="menu">
                     <li class="dropdown">
-                        <a href="../index.html" class="jestesNaTejStronie">Poznaj nas</a>
+                        <a href="../index.html">Poznaj nas</a>
                         <ul class="submenu">
-                            <li><a href="pastorzy.html" class="jestesNaTejStronie">Pastorzy</a></li>
+                            <li><a href="pastorzy.html">Pastorzy</a></li>
                             <li><a href="historia.html">Historia budynku</a></li>
                         </ul>
                     </li>
@@ -42,28 +42,48 @@
                 <a href="jakdzialamy.html">Jak działamy</a>
                 <a href="counas.html">Co u nas</a>
                 <a href="start.html">Start z Bogiem</a>
-                <a href="wsparcie.html">Wsparcie</a>
+                <a href="wsparcie.html" class="jestesNaTejStronie">Wsparcie</a>
                 <a href="kontakt.html">Kontakt</a>
             </nav>
         </header>
     </section>
 
     <main>
-        <div class="dwaElementy">
-            <div class="elementPolowa">
-                <img src="../img/pastorzy.jpg" alt="Pastorzy naszego Kościoła">
-            </div>
+        <div class="akapitTekstu">
+            <h3>Wspieram</h3>
+            <p>
+                Numer konta bankowego:
+            </p>
+            <p class="kopiuj">
+                66 1090 2369 0000 0001 4246 4771
+            </p>
+            <p>
+                Jako wspólnota chrześcijan planujemy inwestycję budowy Chrześcijańskiego Centrum Misyjnego, które&nbsp;będzie się znajdować obok budynku naszego kościoła, przy ulicy Wiejskiej&nbsp;24. Będzie to miejsce otwarte dla ludzi w&nbsp;każdym wieku: dzieci, młodzieży, dorosłych i&nbsp;seniorów -&nbsp;pełne spotkań, warsztatów, wydarzeń i&nbsp;inicjatyw społecznych. Ma służyć ludziom w&nbsp;budowaniu wartościowych relacji i&nbsp;inspiracji do życia z&nbsp;Bogiem. Zachęcamy do wsparcia tej wizji, aby razem stworzyć przestrzeń, z&nbsp;której będzie płynąć nadzieja, pomoc i&nbsp;Dobra Nowina dla kolejnych pokoleń.
+            </p>
+        </div>
 
-            <div class="elementPolowa">
-                <h3>Pastorzy</h3>
-                <h2>Zdzisław i Lucyna Niemiec</h2>
-                <p>Pastorzy Kościoła w&nbsp;Świebodzicach od 2008 roku.<br>
-                W&nbsp;pełni oddani  służbie Bogu i&nbsp;ludziom.<br>
-                Razem tworzą autentyczne, pełne ciepła i&nbsp;troski przywództwo. Swoje życie opierają na prawdzie Pisma Świętego i&nbsp;relacji z&nbsp;Bogiem, Jezusem i&nbsp;Duchem Świętym. Ich życie jest świadectwem Bożego działania. Mają ogromne serce dla ludzi, zawsze gotowi do modlitwy i&nbsp;pomocy. Prowadzą kościół z&nbsp;pokorą i&nbsp;zaangażowaniem — obecni w&nbsp;życiu wspólnoty na co dzień. Prywatnie ludzie pełni życzliwości i&nbsp;troski o&nbsp;innych. Prowadzą otwarty dom, słyną z&nbsp;gościnności i&nbsp;dobrej kuchni. Są dziadkami sześciorga wnucząt i&nbsp;rodzicami trzech dorosłych synów, którzy całymi rodzinami służą Bogu jako pastorzy i&nbsp;liderzy w&nbsp;kościołach w&nbsp;Warszawie.</p>
-            </div>
+        <div class="zdjecieWspieram">
+            <img src="../img/wsparcie.png" alt="Zdjęcie drugiego budynku Kościoła" id="wspZdj">
         </div>
     </main>
 
+    <style>
+        .zdjecieWspieram
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0% 10% 5% 10%;
+            background-color: var(--kolorTla);
+        }
+
+        #wspZdj
+        {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    
     <footer>
         <p>Chrześcijańskie Centrum Misja24<br>Kościół Zielonoświątkowy<br>58-160 Świebodzice, ul. Wiejska 24</p>
         <br>
@@ -79,5 +99,3 @@
     </footer>
 </body>
 </html>
-
-<!-- h1 jest główne, cieńkie; h2 zwyczajne h3 to caps kolorem 53678c; linki są czarne; paragrafy są czarne; każda sekcja musi mieć id, dodatkowo wTakiejPisowni; klasa .tekstZNaglowkiem jest dla tekstów z nagłówkiem h2><br><p -->
