@@ -381,6 +381,7 @@ footer p
     text-align: center;
     overflow-wrap: break-word;
     word-break: break-word;
+    background-color: var(--kolorTla);
     
 }
 
