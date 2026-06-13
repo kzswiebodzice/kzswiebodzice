@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ChCM24 Kościół Zielonoświątkowy w Świebodzicach">
+    <meta name="keywords" content="kościół, zielonoświątkowy, świebodzice, nabożeństwa, chrześcijaństwo, wiara, misja">
+    <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <script src="js/main.js" defer></script>
-    <title>
-        ChCM24 kzswiebodzice.pl
-    </title>
+
+    <title>ChCM24 kzswiebodzice.pl</title>
+    <meta name="description" content="ChCM24 | Oficjalna strona Kościoła Zielonoświątkowego w Świebodzicach. Informacje o nabożeństwach, o naszej społeczności, o naszym budynku i jego historii i kontakcie do nas.">
+    <link rel="canonical" href="https://kzswiebodzice.pl/">
+
+    <meta property="og:title" content="ChCM24 | Kościół Zielonoświątkowy w Świebodzicach">
+    <meta property="og:description" content="Oficjalna strona Kościoła Zielonoświątkowego w Świebodzicach">
+    <meta property="og:image" content="https://kzswiebodzice.pl/img/logo.jpg">
+    <meta property="og:url" content="https://kzswiebodzice.pl">
+    <meta property="og:type" content="website">
 </head>
 
 <style>
@@ -19,6 +28,21 @@
     {
         height: 100vh;
         background-image: url(img/bannerTlo.jpg);
+    }
+
+    #banner h2
+    {
+        color: white;
+    }
+
+    h1, #poznajmySie p
+    {
+        display: inline;
+    }
+
+    .akapitTekstu
+    {
+        text-align: justify;
     }
 </style>
 
@@ -47,26 +71,23 @@
             </nav>
         </header>
 
-    <!-- </section>
-</body>
-</html>
----------- do tego miejsca ma się powtarzać + przycisk ciemny/jasny tryb ---------- -->
-
         <section id="banner">
-            <h1><strong>Witaj,</strong> cieszymy się, że&nbsp;tu zaglądasz.</h1>
-            <h1>Jesteśmy <strong>kościołem,</strong> który tworzą <strong>ludzie,</strong> a&nbsp;nie mury. Wierzymy w <strong>Boga Ojca, Jezusa&nbsp;i&nbsp;Ducha&nbsp;Świętego.</strong></h1>
-            <a href="#poznajmySie" id="poznajNas"><h1><strong><i>Poznaj nas...</i></strong></h1></a>
+            <h2><strong>Witaj,</strong> cieszymy się, że&nbsp;tu zaglądasz.</h2>
+            <h2>Jesteśmy <strong>kościołem,</strong> który tworzą <strong>ludzie,</strong> a&nbsp;nie mury. Wierzymy w <strong>Boga Ojca, Jezusa&nbsp;i&nbsp;Ducha&nbsp;Świętego.</strong></h2>
+            <a href="#poznajmySie" id="poznajNas"><h2><strong><i>Poznaj nas...</i></strong></h2></a>
         </section>
     </section>
 
     <main>
-        <div class="akapitTekstu" id="poznajmySie">
-            <p style="text-align: justify;">
-                <strong style="color: #53678c; text-transform: uppercase; font-size: clamp(2rem, 3vw, 2.5rem);">Kościół</strong>
-                to nie budynek. To my. Ludzie, którzy kochają Boga, Jezusa i&nbsp;Ducha Świętego. Pismo Święte i&nbsp;prawda Ewangelii jest fundamentem naszej wiary. Naszym celem jest relacja — z&nbsp;Bogiem i&nbsp;z&nbsp;drugim człowiekiem.  Wspólnie się modlimy, wspieramy i&nbsp; spędzamy razem czas. Tworzymy przestrzeń otwartą dla każdego. Możesz przyjść taki/taka, jaki/jaka jesteś...<br><br>
-                Nasze spotkania są pełne życia, inspiracji i&nbsp;przestrzeni do spotkania z&nbsp;Duchem Świętym. Nie jesteśmy idealni, też się uczymy i&nbsp;popełniamy błędy. Niezależnie od tego, na jakim etapie swojej drogi jesteś — znajdziesz tu miejsce dla siebie. Wierzymy, że wiara nie jest teorią, ale doświadczeniem, które zmienia codzienność. Wierzymy, że Jezus naprawdę działa i&nbsp;zmienia życie – wiemy to z&nbsp;własnego doświadczenia.<br><br>
-                Naszą misją jest żyć według Bożych zasad, dzielić się dobrą wiadomością o&nbsp;Jezusie i&nbsp;wnosić nadzieję tam, gdzie jej brakuje. Wierzymy, że każdya&nbsp;nas ma znaczenie i&nbsp;może być częścią czegoś większego. Chcemy tworzyć kulturę Bożego Królestwa w&nbsp;codzienności — w&nbsp;naszych domach, pracy, w&nbsp;szkole oraz w&nbsp;naszym mieście. Zapraszamy Cię, pozwól nam Cię poznać.
-            </p>
+        <div class="akapitTekstu">
+            <div id="poznajmySie">
+                <h1>Kościół</h1>
+                <p>
+                    &nbsp;to nie budynek. To my. Ludzie, którzy kochają Boga, Jezusa i&nbsp;Ducha Świętego. Pismo Święte i&nbsp;prawda Ewangelii jest fundamentem naszej wiary. Naszym celem jest relacja — z&nbsp;Bogiem i&nbsp;z&nbsp;drugim człowiekiem.  Wspólnie się modlimy, wspieramy i&nbsp; spędzamy razem czas. Tworzymy przestrzeń otwartą dla każdego. Możesz przyjść taki/taka, jaki/jaka jesteś...<br><br>
+                    Nasze spotkania są pełne życia, inspiracji i&nbsp;przestrzeni do spotkania z&nbsp;Duchem Świętym. Nie jesteśmy idealni, też się uczymy i&nbsp;popełniamy błędy. Niezależnie od tego, na jakim etapie swojej drogi jesteś — znajdziesz tu miejsce dla siebie. Wierzymy, że wiara nie jest teorią, ale doświadczeniem, które zmienia codzienność. Wierzymy, że Jezus naprawdę działa i&nbsp;zmienia życie – wiemy to z&nbsp;własnego doświadczenia.<br><br>
+                    Naszą misją jest żyć według Bożych zasad, dzielić się dobrą wiadomością o&nbsp;Jezusie i&nbsp;wnosić nadzieję tam, gdzie jej brakuje. Wierzymy, że każdya&nbsp;nas ma znaczenie i&nbsp;może być częścią czegoś większego. Chcemy tworzyć kulturę Bożego Królestwa w&nbsp;codzienności — w&nbsp;naszych domach, pracy, w&nbsp;szkole oraz w&nbsp;naszym mieście. Zapraszamy Cię, pozwól nam Cię poznać.
+                </p>
+            </div>
         </div>
 
         <div class="dwaElementy">
@@ -123,6 +144,19 @@
             </button>
         </p>
     </footer>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Church",
+        "name": "Kościół Zielonoświątkowy w Świebodzicach",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Świebodzice",
+                "addressCountry": "PL"
+            }
+        }
+    </script>
 </body>
 </html>
 

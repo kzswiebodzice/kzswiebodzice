@@ -39,20 +39,20 @@ body.ciemny
 
 /* ---------- tekst ---------- */
 
-h1
+h2
 {
-    font-size: clamp(1.2rem, 3vw, 3.5rem);
     font-weight: 300; /* cieńki */
     color: var(--kolorTekstu);
+    font-size: clamp(1.2rem, 3vw, 3.5rem);
 }
 
-h2
+h3
 {
     color: var(--kolorTekstu);
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-h3
+h1
 {
     color: #53678c;
     text-transform: uppercase;
@@ -92,10 +92,10 @@ a#poznajNas
 
 .kopiuj
 {
-    color: var(--kolorTekstu);
-    transition: color 200ms ease; /* przejście do niebieskiego koloru na :hover */
     cursor: pointer;
+    color: var(--kolorTekstu);
     text-decoration: underline;
+    transition: color 200ms ease; /* przejście do niebieskiego koloru na :hover */
 }
 
 .kopiuj:hover
@@ -115,21 +115,17 @@ a#poznajNas
 {
     display: flex;
     flex-direction: column;
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header
 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 0% 10% 0% 30%;
-}
-
-#banner h1 {
-    color: white;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 #logo
@@ -143,26 +139,26 @@ header
 
 #logoKZHeader /* zdjęcie, logo kościoła */
 {
-    width: clamp(100px, 12vw, 250px); 
     height: auto;
+    width: clamp(100px, 12vw, 250px); 
 }
 
 #adresPodLogo /* adres budynku */
 {
+    width: 100%;
     color: #ffffff;
     font-size: 1rem;
-    width: 100%;
-    font-size: clamp(8px, 0.8vw, 14px);
     line-height: 1.2;
     text-align: center;
+    font-size: clamp(8px, 0.8vw, 14px);
 }
 
 nav
 {
     width: 100%;
     height: 80px;
-    min-height: 80px;
     display: flex;
+    min-height: 80px;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -170,16 +166,16 @@ nav
 
 nav a
 {
-    text-transform: uppercase; /* duże litery dla menu */
     color: #ffffff;
+    text-transform: uppercase; /* duże litery dla menu */
 }
 
 /* ---------- menu wysuwane ---------- */
 
 .menu
 {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 .menu li
@@ -189,8 +185,8 @@ nav a
 
 .menu a
 {
-    padding: 15px 0px;
     display: block;
+    padding: 15px 0px;
 }
 
 .menu a:hover
@@ -204,23 +200,23 @@ nav a
     left: 0;
     top: 100%;
     padding: 0;
+    display: none;
     min-width: 200px;
+    list-style: none;
     border-radius: 5%;
+    position: absolute;
     background: rgba(83,103,140,0.5);
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    display: none;
-    list-style: none;
-    position: absolute;
 }
 
 .submenu li a
 {
-    padding: 1rem;
-    transition: color 200ms ease;
     color: white;
+    padding: 1rem;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 200ms ease;
 }
 
 .submenu li a:hover
@@ -246,23 +242,23 @@ a.jestesNaTejStronie
 
 #banner
 {
-    min-height: calc(100vh - 80px);
     flex: 1;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
     padding: 55vh 10% 0% 10%;
+    justify-content: flex-start;
+    min-height: calc(100vh - 80px);
 }
 
-/* ---------- przycisk ---------- */
+/* ---------- przyciski ---------- */
 
 #trybyPrzycisk /* ciemny/jasny motyw */
 { 
     all: unset;
-    cursor: pointer;
     flex-shrink: 0;
+    cursor: pointer;
     margin-top: 0.1em;
 }
 
@@ -285,8 +281,8 @@ a.jestesNaTejStronie
 
 footer
 {
-    padding: 5% 10%;
     display: flex;
+    padding: 5% 10%;
     flex-direction: row;
     background-color: #222222;
     justify-content: space-between;
@@ -309,24 +305,24 @@ footer p
 .akapitTekstu
 {
     width: 100%;
-    padding: 0% 10% 5% 10%;
-    background-color: var(--kolorTla);
     display: flex;
+    padding: 0% 10% 5% 10%;
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--kolorTla);
 }
 
 .dwaElementy
 {
     gap: 5%;
     width: 100%;
-    padding: 0% 10% 5% 10%;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     align-content: center;
-    min-height: clamp(300px, 50vh, 600px);
+    padding: 0% 10% 5% 10%;
     background-color: var(--kolorTla);
+    min-height: clamp(300px, 50vh, 600px);
 }
 
 .akapitTekstu:first-of-type, .dwaElementy:first-of-type
@@ -337,9 +333,9 @@ footer p
 .elementPolowa
 {
     flex: 1;
-    line-height: 1.5;
     display: flex;
     overflow: hidden;
+    line-height: 1.5;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -353,51 +349,9 @@ footer p
 { 
     width: 100%;
     height: auto;
+    display: block;
     object-fit: cover;
-    display: block;
     transition: filter 0.3s ease;
-}
-
-.sociale
-{
-    width: 100%;
-    margin: 0px;
-    box-sizing: border-box;
-    padding: 0% 15% 5% 15%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background-color: var(--kolorTla);
-    gap: clamp(10px, 2vw, 30px);
-}
-
-.socialebox
-{
-    min-width: 0;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    background-color: var(--kolorTla);
-}
-
-.sociale img
-{
-    width: 180px;
-    object-fit: contain;
-}
-
-#kalendarz
-{
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    max-height: 80vh;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
 }
 
 @media (max-width: 1200px)
