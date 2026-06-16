@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <title>ChCM24 kzswiebodzice.pl</title>
+    <title>ChCM24 | kzswiebodzice.pl</title>
     <meta name="description" content="ChCM24 | Oficjalna strona Kościoła Zielonoświątkowego w Świebodzicach. Informacje o nabożeństwach, o naszej społeczności, o naszym budynku i jego historii i kontakcie do nas.">
     <link rel="canonical" href="https://kzswiebodzice.pl/">
 
@@ -44,6 +44,20 @@
     {
         text-align: justify;
     }
+
+    @media (max-width: 1000px)
+    {
+        #powitanie
+        {
+            height: 50vh;
+        }
+
+        #banner
+        {
+            padding: 0% 2% 3% 2%;
+            min-height: auto;
+        }
+    }
 </style>
 
 <body>
@@ -53,7 +67,7 @@
                 <a href="index.html"><img src="img/logo.jpg" alt="logo" id="logoKZHeader"></a>
                 <p id="adresPodLogo" style="margin-top: 8px;">ul. Wiejska 24, 58-160 Świebodzice</p>
             </div>
-            <nav>
+            <nav id="monitor">
                 <ul class="menu">
                     <li class="dropdown">
                         <a href="index.html" class="jestesNaTejStronie">Poznaj nas</a>
@@ -69,11 +83,21 @@
                 <a href="html/wsparcie.html">Wsparcie</a>
                 <a href="html/kontakt.html">Kontakt</a>
             </nav>
+            <nav id="telefon">
+                <a href="index.html" class="jestesNaTejStronie">Poznaj nas</a>
+                <a href="html/pastorzy.html">Pastorzy ↩</a>
+                <a href="html/historia.html">Historia budynku ↩</a>
+                <a href="html/jakdzialamy.html">Jak działamy</a>
+                <a href="html/counas.html">Co u nas</a>
+                <a href="html/start.html">Start z Bogiem</a>
+                <a href="html/wsparcie.html">Wsparcie</a>
+                <a href="html/kontakt.html">Kontakt</a>
+            </nav>
         </header>
 
         <section id="banner">
-            <h2><strong>Witaj,</strong> cieszymy się, że&nbsp;tu zaglądasz.</h2>
-            <h2>Jesteśmy <strong>kościołem,</strong> który tworzą <strong>ludzie,</strong> a&nbsp;nie mury. Wierzymy w <strong>Boga Ojca, Jezusa&nbsp;i&nbsp;Ducha&nbsp;Świętego.</strong></h2>
+            <h2>Witaj, cieszymy się, że&nbsp;tu zaglądasz.</h2>
+            <h2>Jesteśmy <strong>kościołem,</strong> który tworzą <strong>ludzie,</strong> a&nbsp;nie mury. Wierzymy w <strong>Boga w trójcy jedynego Ojca, Syna&nbsp;i&nbsp;Ducha&nbsp;Świętego.</strong></h2>
             <a href="#poznajmySie" id="poznajNas"><h2><strong><i>Poznaj nas...</i></strong></h2></a>
         </section>
     </section>
@@ -83,9 +107,10 @@
             <div id="poznajmySie">
                 <h1>Kościół</h1>
                 <p>
-                    &nbsp;to nie budynek. To my. Ludzie, którzy kochają Boga, Jezusa i&nbsp;Ducha Świętego. Pismo Święte i&nbsp;prawda Ewangelii jest fundamentem naszej wiary. Naszym celem jest relacja — z&nbsp;Bogiem i&nbsp;z&nbsp;drugim człowiekiem.  Wspólnie się modlimy, wspieramy i&nbsp; spędzamy razem czas. Tworzymy przestrzeń otwartą dla każdego. Możesz przyjść taki/taka, jaki/jaka jesteś...<br><br>
+                    &nbsp;to nie budynek. To my. Ludzie, którzy kochają Boga, Jezusa i&nbsp;Ducha Świętego. Pismo Święte i&nbsp;prawda Ewangelii jest fundamentem naszej wiary. Naszym celem jest relacja — z&nbsp;Bogiem i&nbsp;z&nbsp;drugim człowiekiem. Wspólnie się modlimy, wspieramy i&nbsp;spędzamy razem czas. Tworzymy przestrzeń otwartą dla każdego. Możesz przyjść taki/taka, jaki/jaka jesteś...<br><br>
                     Nasze spotkania są pełne życia, inspiracji i&nbsp;przestrzeni do spotkania z&nbsp;Duchem Świętym. Nie jesteśmy idealni, też się uczymy i&nbsp;popełniamy błędy. Niezależnie od tego, na jakim etapie swojej drogi jesteś — znajdziesz tu miejsce dla siebie. Wierzymy, że wiara nie jest teorią, ale doświadczeniem, które zmienia codzienność. Wierzymy, że Jezus naprawdę działa i&nbsp;zmienia życie – wiemy to z&nbsp;własnego doświadczenia.<br><br>
-                    Naszą misją jest żyć według Bożych zasad, dzielić się dobrą wiadomością o&nbsp;Jezusie i&nbsp;wnosić nadzieję tam, gdzie jej brakuje. Wierzymy, że każdya&nbsp;nas ma znaczenie i&nbsp;może być częścią czegoś większego. Chcemy tworzyć kulturę Bożego Królestwa w&nbsp;codzienności — w&nbsp;naszych domach, pracy, w&nbsp;szkole oraz w&nbsp;naszym mieście. Zapraszamy Cię, pozwól nam Cię poznać.
+                    Naszą misją jest żyć według Bożych zasad, dzielić się dobrą wiadomością o&nbsp;Jezusie i&nbsp;wnosić nadzieję tam, gdzie jej brakuje. Wierzymy, że każdy z&nbsp;nas ma znaczenie i&nbsp;może być częścią czegoś większego. Chcemy tworzyć kulturę Bożego Królestwa w&nbsp;codzienności — w&nbsp;naszych domach, pracy, w&nbsp;szkole oraz w&nbsp;naszym mieście. Zapraszamy Cię, pozwól nam Cię poznać.<br><br>
+                    Wizja naszego kościoła: pielęgnując osobistą więź z&nbsp;Ojcem, Synem i&nbsp;Duchem Świętym oraz płynącą z&nbsp;tej relacji moc, ustanawiać Królestwo Boże wszędzie tam gdzie stanie nasza stopa.
                 </p>
             </div>
         </div>

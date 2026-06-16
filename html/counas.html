@@ -37,7 +37,7 @@
         box-sizing: border-box;
         padding: 0% 15% 5% 15%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         background-color: var(--kolorTla);
         gap: clamp(10px, 2vw, 30px);
     }
@@ -71,6 +71,32 @@
         border-radius: 12px;
         box-shadow: 0 4px 5px rgba(0,0,0,0.15);
     }
+
+    #napisTelefon
+    {
+        display: none;
+    }
+
+    @media (max-width: 1000px)
+    {
+        #kalendarz
+        {
+            min-height: 500px;
+        }
+    }
+
+    @media (max-width: 705px)
+    {
+        #napisMonitor
+        {
+            display: none;
+        }
+
+        #napisTelefon
+        {
+            display: block;
+        }
+    }
 </style>
 
 <body>
@@ -80,7 +106,7 @@
                 <a href="../index.html"><img src="../img/logo.jpg" alt="logo" id="logoKZHeader"></a>
                 <p id="adresPodLogo" style="margin-top: 8px;">ul. Wiejska 24, 58-160 Świebodzice</p>
             </div>
-            <nav>
+            <nav id="monitor">
                 <ul class="menu">
                     <li class="dropdown">
                         <a href="../index.html">Poznaj nas</a>
@@ -96,21 +122,31 @@
                 <a href="wsparcie.html">Wsparcie</a>
                 <a href="kontakt.html">Kontakt</a>
             </nav>
+            <nav id="telefon">
+                <a href="../index.html">Poznaj nas</a>
+                <a href="pastorzy.html">Pastorzy ↩</a>
+                <a href="historia.html">Historia budynku ↩</a>
+                <a href="jakdzialamy.html">Jak działamy</a>
+                <a href="counas.html" class="jestesNaTejStronie">Co u nas</a>
+                <a href="start.html">Start z Bogiem</a>
+                <a href="wsparcie.html">Wsparcie</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
         </header>
     </section>
 
     <main>
         <div class="dwaElementy">
             <div class="elementPolowa">
-                <a href="https://www.youtube.com/@kzswiebodzice2999"><img src="../img/posluchaj.jpg" alt="Posłuchaj nauczania"></a>
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank"><img src="../img/posluchaj.jpg" alt="Posłuchaj nauczania"></a>
             </div>
 
             <div class="elementPolowa">
                 <h1>Posłuchaj nauczania</h1>
                 <p>Kanał YouTube 
-                <a href="https://www.youtube.com/@kzswiebodzice2999">KZ Świebodzice</a>
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank">KZ Świebodzice</a>
                 -&nbsp;to kanał naszego lokalnego kościoła. Publikowane nauczania pochodzą z&nbsp;niedzielnych nabożeństw. Łączą biblijną prawdę o&nbsp;Bogu z&nbsp;codziennymi doświadczeniami życia z&nbsp;Nim. Posłuchaj i&nbsp;zainspiruj się, bo jak jest zapisane w&nbsp;Biblii: „Wiara więc jest ze słuchania, a&nbsp;słuchanie – przez słowo Boże.” (List apostoła Pawła do Rzymian 10:17)<br>
-                <a href="https://www.youtube.com/@kzswiebodzice2999">Posłuchaj teraz ></a></p>
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank">Posłuchaj teraz ></a></p>
             </div>
         </div>
 
@@ -121,28 +157,28 @@
 
         <div class="sociale">
             <div class="socialebox">
-                <a href="https://www.facebook.com/misja24">
+                <a href="https://www.facebook.com/misja24" target="_blank">
                     <img src="../img/fb.png" alt="Facebook">
                     <h1>Facebook</h1>
                     <p>kzswiebodzice</p>
                 </a>
             </div>
             <div class="socialebox">
-                <a href="https://www.instagram.com/kzswiebodzice/">
+                <a href="https://www.instagram.com/kzswiebodzice/" target="_blank">
                     <img src="../img/ig.png" alt="Instagram">
                     <h1>Instagram</h1>
                     <p>@kzswiebodzice</p>
                 </a>
             </div>
             <div class="socialebox">
-                <a href="https://www.instagram.com/youth_misja24/">
+                <a href="https://www.instagram.com/youth_misja24/" target="_blank">
                     <img src="../img/ig.png" alt="Instagram">
                     <h1>Instagram</h1>
                     <p>@youth_misja24</p>
                 </a>
             </div>
             <div class="socialebox">
-                <a href="https://www.youtube.com/@kzswiebodzice2999">
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank">
                     <img src="../img/yt.png" alt="YouTube">
                     <h1>YouTube</h1>
                     <p>KZ Świebodzice</p>
@@ -152,7 +188,8 @@
 
         <div class="socialebox">
             <h1>Kalendarz wydarzeń</h1>
-            <p>Dodaj do kalendarza Google i bądź na bieżąco!</p>
+            <p id="napisMonitor">Dodaj do kalendarza Google i&nbsp;bądź na bieżąco!</p>
+            <p id="napisTelefon">Dodaj do kalendarza Google naciskając przycisk <strong>"+"</strong> i&nbsp;bądź na bieżąco!</p>
         </div>
 
         <div class="akapitTekstu">

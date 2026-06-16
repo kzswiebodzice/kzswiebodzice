@@ -29,6 +29,29 @@
         height: 40vh;
         background-image: url(../img/bannerTloLisc.jpg);
     }
+
+    .zdjecieWspieram
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0% 10% 5% 10%;
+        background-color: var(--kolorTla);
+    }
+
+    #wspZdj
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 1000px)
+    {
+        .zdjecieWspieram
+        {
+            padding: 0px 0px 5% 0px;
+        }
+    }
 </style>
 
 <body>
@@ -38,7 +61,7 @@
                 <a href="../index.html"><img src="../img/logo.jpg" alt="logo" id="logoKZHeader"></a>
                 <p id="adresPodLogo" style="margin-top: 8px;">ul. Wiejska 24, 58-160 Świebodzice</p>
             </div>
-            <nav>
+            <nav id="monitor">
                 <ul class="menu">
                     <li class="dropdown">
                         <a href="../index.html">Poznaj nas</a>
@@ -48,6 +71,16 @@
                         </ul>
                     </li>
                 </ul>
+                <a href="jakdzialamy.html">Jak działamy</a>
+                <a href="counas.html">Co u nas</a>
+                <a href="start.html">Start z Bogiem</a>
+                <a href="wsparcie.html" class="jestesNaTejStronie">Wsparcie</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <nav id="telefon">
+                <a href="../index.html">Poznaj nas</a>
+                <a href="pastorzy.html">Pastorzy ↩</a>
+                <a href="historia.html">Historia budynku ↩</a>
                 <a href="jakdzialamy.html">Jak działamy</a>
                 <a href="counas.html">Co u nas</a>
                 <a href="start.html">Start z Bogiem</a>
@@ -77,23 +110,6 @@
             <img src="../img/wsparcie.png" alt="Zdjęcie drugiego budynku Kościoła" id="wspZdj">
         </div>
     </main>
-
-    <style>
-        .zdjecieWspieram
-        {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0% 10% 5% 10%;
-            background-color: var(--kolorTla);
-        }
-
-        #wspZdj
-        {
-            width: 100%;
-            height: auto;
-        }
-    </style>
     
     <footer>
         <p>Chrześcijańskie Centrum Misja24<br>Kościół Zielonoświątkowy<br>58-160 Świebodzice, ul. Wiejska 24</p>

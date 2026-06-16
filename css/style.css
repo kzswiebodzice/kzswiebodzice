@@ -61,9 +61,9 @@ h1
 
 p
 {
-    line-height: 1.8;
+    line-height: 1.4;
     color: var(--kolorTekstu);
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(1rem, 3vw, 1.8rem);
 }
 
 a
@@ -82,12 +82,6 @@ a:hover
 a img:hover
 {
     filter: brightness(0.8);
-}
-
-a#poznajNas
-{
-    text-transform: none; 
-    text-decoration: none;
 }
 
 .kopiuj
@@ -123,14 +117,14 @@ a#poznajNas
 header
 {
     display: flex;
-    padding: 0% 10% 0% 30%;
+    padding: 0% clamp(5%, 3vw, 10%) 0% clamp(20%, 30vw, 30%);
     align-items: flex-start;
     justify-content: space-between;
 }
 
 #logo
 {
-    left: 80px;
+    left: clamp(5px, 3vw, 80px);
     display: flex;
     position: absolute;
     align-items: center;
@@ -140,20 +134,19 @@ header
 #logoKZHeader /* zdjęcie, logo kościoła */
 {
     height: auto;
-    width: clamp(100px, 12vw, 250px); 
+    width: clamp(100px, 12vw, 250px);
 }
 
 #adresPodLogo /* adres budynku */
 {
     width: 100%;
     color: #ffffff;
-    font-size: 1rem;
     line-height: 1.2;
     text-align: center;
     font-size: clamp(8px, 0.8vw, 14px);
 }
 
-nav
+#monitor /* monitor */
 {
     width: 100%;
     height: 80px;
@@ -162,6 +155,11 @@ nav
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#telefon
+{
+    display: none;
 }
 
 nav a
@@ -247,8 +245,8 @@ a.jestesNaTejStronie
     text-align: center;
     align-items: center;
     flex-direction: column;
-    padding: 55vh 10% 0% 10%;
-    justify-content: flex-start;
+    padding: 0% clamp(2%, 3vw, 10%) 5vh clamp(2%, 3vw, 10%);
+    justify-content: flex-end;
     min-height: calc(100vh - 80px);
 }
 
@@ -340,11 +338,6 @@ footer p
     justify-content: flex-start;
 }
 
-.elementPolowa p
-{
-    font-size: clamp(1rem, 3vw, 1.5rem);
-}
-
 .elementPolowa img
 { 
     width: 100%;
@@ -375,6 +368,46 @@ footer p
     .akapitTekstu:first-child
     {
         padding: 5% 5% 5% 5%;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    #monitor
+    {
+        display: none;
+    }
+    
+    #telefon
+    {
+        right: 0px;
+        display: flex;
+        text-align: right;
+        position: absolute;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 20px 20px 15px 20px;
+        border-bottom-left-radius: 20px;
+        background-color: color-mix(in srgb, var(--kolorTla) 80%, transparent);
+    }
+
+    #telefon a
+    {
+        color: var(--kolorTekstu);
+        margin: 0px;
+        padding-bottom: 5px !important;
+        padding-top: 0px !important;
+        display: block;
+    }
+
+    #logo
+    {
+        display: none;
+    }
+
+    #powitanie
+    {
+        background-position: right;
     }
 }
 
