@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ChCM24 Kościół Zielonoświątkowy w Świebodzicach">
+    <meta name="keywords" content="kościół, zielonoświątkowy, świebodzice, nabożeństwa, chrześcijaństwo, wiara, misja">
+    <script src="../js/main.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+
+    <title>ChCM24 | Co u nas</title>
+    <meta name="description" content="ChCM24 | Poznaj nasze social media, aktualne wydarzenia lub posłuchaj kazania.">
+    <link rel="canonical" href="https://kzswiebodzice.pl/co-u-nas/">
+
+    <meta property="og:title" content="ChCM24 | Co u nas">
+    <meta property="og:description" content="Poznaj nasze social media, aktualne wydarzenia lub posłuchaj kazania">
+    <meta property="og:image" content="https://kzswiebodzice.pl/img/logo.jpg">
+    <meta property="og:url" content="https://kzswiebodzice.pl/co-u-nas/">
+    <meta property="og:type" content="website">
+</head>
+
+<style>
+    #powitanie
+    {
+        height: 40vh;
+        background-image: url(../img/bannerTloKosciol.jpg);
+    }
+
+    .sociale
+    {
+        width: 100%;
+        margin: 0px;
+        box-sizing: border-box;
+        padding: 0% 15% 5% 15%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        background-color: var(--kolorTla);
+        gap: clamp(10px, 2vw, 30px);
+    }
+
+    .socialebox
+    {
+        min-width: 0;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        background-color: var(--kolorTla);
+    }
+
+    .sociale img
+    {
+        width: 180px;
+        object-fit: contain;
+    }
+
+    #kalendarz
+    {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        max-height: 80vh;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+    }
+
+    #napisTelefon
+    {
+        display: none;
+    }
+
+    @media (max-width: 1280px) and (orientation: portrait)
+    {
+        #kalendarz
+        {
+            min-height: 500px;
+        }
+
+        #divKalendarz
+        {
+            padding: 1%;
+        }
+    }
+
+    @media (max-width: 705px)
+    {
+        #napisMonitor
+        {
+            display: none;
+        }
+
+        #napisTelefon
+        {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1280px) and (orientation: landscape)
+    {
+        #powitanie
+        {
+            height: 80vh;
+            background-position: center !important;
+        }
+
+        #divKalendarz
+        {
+            padding: 1%;
+        }
+    }
+</style>
+
+<body>
+    <section id="powitanie">
+        <header>
+            <div id="logo">
+                <a href="../index.html"><img src="../img/logo.jpg" alt="logo" id="logoKZHeader"></a>
+                <p id="adresPodLogo" style="margin-top: 8px;">ul. Wiejska 24, 58-160 Świebodzice</p>
+            </div>
+            <nav id="monitor">
+                <ul class="menu">
+                    <li class="dropdown">
+                        <a href="../index.html">Poznaj nas</a>
+                        <ul class="submenu">
+                            <li><a href="../pastorzy/index.html">Pastorzy</a></li>
+                            <li><a href="../historia/index.html">Historia budynku</a></li>
+                            <li><a href="../credo/index.html">Credo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="../jak-dzialamy/index.html">Jak działamy</a>
+                <a href="../co-u-nas/index.html" class="jestesNaTejStronie">Co u nas</a>
+                <a href="../start/index.html">Start z Bogiem</a>
+                <a href="../wsparcie/index.html">Wsparcie</a>
+                <a href="../kontakt/index.html">Kontakt</a>
+            </nav>
+            <nav id="telefon">
+                <a href="../index.html">Poznaj nas</a>
+                <a href="../pastorzy/index.html">Pastorzy ↩</a>
+                <a href="../historia/index.html">Historia ↩</a>
+                <a href="../credo/index.html">Credo ↩</a>
+                <a href="../jak-dzialamy/index.html">Jak działamy</a>
+                <a href="../co-u-nas/index.html" class="jestesNaTejStronie">Co u nas</a>
+                <a href="../start/index.html">Start z Bogiem</a>
+                <a href="../wsparcie/index.html">Wsparcie</a>
+                <a href="../kontakt/index.html">Kontakt</a>
+            </nav>
+        </header>
+    </section>
+
+    <main>
+        <div class="dwaElementy">
+            <div class="elementPolowa">
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank"><img src="../img/posluchaj.jpg" alt="Posłuchaj nauczania"></a>
+            </div>
+
+            <div class="elementPolowa">
+                <h1>Posłuchaj nauczania</h1>
+                <p>Kanał YouTube 
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank">KZ Świebodzice</a>
+                -&nbsp;to kanał naszego lokalnego kościoła. Publikowane nauczania pochodzą z&nbsp;niedzielnych nabożeństw. Łączą biblijną prawdę o&nbsp;Bogu z&nbsp;codziennymi doświadczeniami życia z&nbsp;Nim. Posłuchaj i&nbsp;zainspiruj się, bo jak jest zapisane w&nbsp;Biblii: „Wiara więc jest ze słuchania, a&nbsp;słuchanie – przez słowo Boże.” (List apostoła Pawła do Rzymian 10:17)<br>
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank">Posłuchaj teraz ></a></p>
+            </div>
+        </div>
+
+        <div class="socialebox">
+            <h1>Social Media</h1>
+            <p>Zobacz nasze social media i bądź na bieżąco!</p>
+        </div>
+
+        <div class="sociale">
+            <div class="socialebox">
+                <a href="https://www.facebook.com/misja24" target="_blank">
+                    <img src="../img/fb.png" alt="Facebook">
+                    <h1>Facebook</h1>
+                    <p>kzswiebodzice</p>
+                </a>
+            </div>
+            <div class="socialebox">
+                <a href="https://www.instagram.com/kzswiebodzice/" target="_blank">
+                    <img src="../img/ig.png" alt="Instagram">
+                    <h1>Instagram</h1>
+                    <p>@kzswiebodzice</p>
+                </a>
+            </div>
+            <div class="socialebox">
+                <a href="https://www.instagram.com/youth_misja24/" target="_blank">
+                    <img src="../img/ig.png" alt="Instagram">
+                    <h1>Instagram</h1>
+                    <p>@youth_misja24</p>
+                </a>
+            </div>
+            <div class="socialebox">
+                <a href="https://www.youtube.com/@kzswiebodzice2999" target="_blank">
+                    <img src="../img/yt.png" alt="YouTube">
+                    <h1>YouTube</h1>
+                    <p>KZ Świebodzice</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="socialebox">
+            <h1>Kalendarz wydarzeń</h1>
+            <p id="napisMonitor">Dodaj do kalendarza Google i&nbsp;bądź na bieżąco!</p>
+            <p id="napisTelefon">Dodaj do kalendarza Google naciskając przycisk <strong>"+"</strong> i&nbsp;bądź na bieżąco!</p>
+        </div>
+
+        <div class="akapitTekstu" id="divKalendarz">
+            <iframe id="kalendarz" src="https://calendar.google.com/calendar/embed?hl=pl&height=800&wkst=2&ctz=Europe%2FWarsaw&showPrint=0&showTitle=0&showCalendars=0&showTz=0&src=a2FsZW5kYXJ6a3pzQGdtYWlsLmNvbQ&color=%23d50000"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>Chrześcijańskie Centrum Misja24<br>Kościół Zielonoświątkowy<br>58-160 Świebodzice, ul. Wiejska 24</p>
+        <br>
+        <p id="stopkaPrawaStrona">
+            &copy; 2026 Filip Godlewski
+            <br>
+            Zmień tryb (jasny/ciemny): 
+            <button id="trybyPrzycisk">
+                <img src="../img/ksiezyc.png" alt="ksiezyc" id="ksiezyc">
+                <img src="../img/slonce.png" alt="slonce" id="slonce">
+            </button>
+        </p>
+    </footer>
+</body>
+</html>
