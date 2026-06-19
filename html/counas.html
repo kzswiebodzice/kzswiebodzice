@@ -77,11 +77,16 @@
         display: none;
     }
 
-    @media (max-width: 1280px)
+    @media (max-width: 1280px) and (orientation: portrait)
     {
         #kalendarz
         {
             min-height: 500px;
+        }
+
+        #divKalendarz
+        {
+            padding: 1%;
         }
     }
 
@@ -95,6 +100,20 @@
         #napisTelefon
         {
             display: block;
+        }
+    }
+
+    @media (max-width: 1280px) and (orientation: landscape)
+    {
+        #powitanie
+        {
+            height: 80vh;
+            background-position: center !important;
+        }
+
+        #divKalendarz
+        {
+            padding: 1%;
         }
     }
 </style>
@@ -113,6 +132,7 @@
                         <ul class="submenu">
                             <li><a href="pastorzy.html">Pastorzy</a></li>
                             <li><a href="historia.html">Historia budynku</a></li>
+                            <li><a href="credo.html">Credo</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -125,7 +145,8 @@
             <nav id="telefon">
                 <a href="../index.html">Poznaj nas</a>
                 <a href="pastorzy.html">Pastorzy ↩</a>
-                <a href="historia.html">Historia budynku ↩</a>
+                <a href="historia.html">Historia ↩</a>
+                <a href="credo.html">Credo ↩</a>
                 <a href="jakdzialamy.html">Jak działamy</a>
                 <a href="counas.html" class="jestesNaTejStronie">Co u nas</a>
                 <a href="start.html">Start z Bogiem</a>
@@ -192,7 +213,7 @@
             <p id="napisTelefon">Dodaj do kalendarza Google naciskając przycisk <strong>"+"</strong> i&nbsp;bądź na bieżąco!</p>
         </div>
 
-        <div class="akapitTekstu">
+        <div class="akapitTekstu" id="divKalendarz">
             <iframe id="kalendarz" src="https://calendar.google.com/calendar/embed?hl=pl&height=800&wkst=2&ctz=Europe%2FWarsaw&showPrint=0&showTitle=0&showCalendars=0&showTz=0&src=a2FsZW5kYXJ6a3pzQGdtYWlsLmNvbQ&color=%23d50000"></iframe>
         </div>
     </main>

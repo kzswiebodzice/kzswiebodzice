@@ -47,7 +47,7 @@
         border-radius: 12px;
     }
 
-    @media (max-width: 1280px)
+    @media (max-width: 1280px) and (orientation: portrait)
     {
         .mapa
         {
@@ -58,6 +58,27 @@
         .mapa iframe
         {
             border-radius: 0px;
+        }
+    }
+
+    @media (max-width: 1280px) and (orientation: landscape)
+    {
+        #powitanie
+        {
+            height: 80vh;
+            background-position: center !important;
+        }
+
+        .mapa
+        {
+            padding: 0px;
+            background-color: #222222;
+        }
+
+        .mapa iframe
+        {
+            border-radius: 0px;
+            height: 100vh !important;
         }
     }
 </style>
@@ -76,6 +97,7 @@
                         <ul class="submenu">
                             <li><a href="pastorzy.html">Pastorzy</a></li>
                             <li><a href="historia.html">Historia budynku</a></li>
+                            <li><a href="credo.html">Credo</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -88,7 +110,8 @@
             <nav id="telefon">
                 <a href="../index.html">Poznaj nas</a>
                 <a href="pastorzy.html">Pastorzy ↩</a>
-                <a href="historia.html">Historia budynku ↩</a>
+                <a href="historia.html">Historia ↩</a>
+                <a href="credo.html">Credo ↩</a>
                 <a href="jakdzialamy.html">Jak działamy</a>
                 <a href="counas.html">Co u nas</a>
                 <a href="start.html">Start z Bogiem</a>

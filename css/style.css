@@ -134,7 +134,7 @@ header
 #logoKZHeader /* zdjęcie, logo kościoła */
 {
     height: auto;
-    width: clamp(100px, 12vw, 250px);
+    width: clamp(120px, 12vw, 250px);
 }
 
 #adresPodLogo /* adres budynku */
@@ -310,6 +310,13 @@ footer p
     background-color: var(--kolorTla);
 }
 
+.akapitTekstu li
+{
+    line-height: 1.4;
+    color: var(--kolorTekstu);
+    font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
 .dwaElementy
 {
     gap: 5%;
@@ -371,7 +378,7 @@ footer p
     }
 }
 
-@media (max-width: 1280px)
+@media (max-width: 1280px) and (orientation: portrait)
 {
     #monitor
     {
@@ -400,9 +407,39 @@ footer p
         display: block;
     }
 
-    #logo
+    #powitanie
+    {
+        background-position: right;
+    }
+}
+
+@media (max-width: 1280px) and (orientation: landscape)
+{
+    #monitor
     {
         display: none;
+    }
+    
+    #telefon
+    {
+        right: 0px;
+        display: flex;
+        text-align: right;
+        position: absolute;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 20px 20px 15px 20px;
+        border-bottom-left-radius: 20px;
+        background-color: color-mix(in srgb, var(--kolorTla) 80%, transparent);
+    }
+
+    #telefon a
+    {
+        color: var(--kolorTekstu);
+        margin: 0px;
+        padding-bottom: 5px !important;
+        padding-top: 0px !important;
+        display: block;
     }
 
     #powitanie
