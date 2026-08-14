@@ -1,81 +1,69 @@
-/* ---------- strona ---------- */
-
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Lato', sans-serif; /* Lato */
-}
-
-/* ---------- zmiana trybu ---------- */
-
-:root
-{
-    --kolorTla: #ffffff; /* kolor tła dla trybu jasnego */
-    --kolorTekstu: #000000; /* kolor tekstu dla trybu jasnego */
-    --kolorStopki: #222222; /* kolor tła stopki dla trybu jasnego */
-    --trybyPrzyciskS: none; /* słońce się nie wyświetla */
-    --trybyPrzyciskK: block; /* księżyc się wyświetla */
+    font-family: 'Lato', sans-serif;
 }
 
 html, body
 {
-    background-color: var(--kolorTla); /* kolot tła biały dla trybu jasnego ciemny dla trybu ciemnego */
-    color: var(--kolorTekstu); /* kolot tekstu biały dla trybu jasnego ciemny dla trybu ciemnego */
+    background-color: #222222;
+    color: #e6e6e6;
     height: 100%;
-    transition: background-color 300ms ease, color 300ms ease;
 }
-
-body.ciemny
-{
-    --kolorTla: #222222; /* ciemny, nie czarny kolor tła dla trybu ciemnego */
-    --kolorTekstu: #e6e6e6; /* biały kolor tekstu */
-    --kolorStopki: #313e57;
-    --trybyPrzyciskS: block; /* słońce się wyświetla */
-    --trybyPrzyciskK: none; /* księżyc się nie wyświetla */
-}
-
-/* ---------- tekst ---------- */
 
 h1
 {
-    color: #53678c;
-    text-transform: uppercase;
+    color: #CE4FF2;
     font-size: clamp(1.5rem, 3vw, 2rem);
+    text-shadow: -2px 2px 2px black;
 }
 
-h2
+h4
 {
-    font-weight: 300; /* cieńki */
-    color: var(--kolorTekstu);
-    font-size: clamp(1.2rem, 3vw, 3.5rem);
-}
-
-h3
-{
-    color: var(--kolorTekstu);
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #e6e6e6;
+    font-size: clamp(3.5rem, 3vw, 5rem);
+    letter-spacing: 1rem;
+    text-shadow: -5px 5px 5px black;
+    text-align: center;
 }
 
 p
 {
     line-height: 1.4;
-    color: var(--kolorTekstu);
+    color: #e6e6e6;
     font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+strong
+{
+    font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+strong:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #e6e6e6;
+}
+
+i
+{
+    color: #CE4FF2;
 }
 
 a
 {
-    text-decoration: none; /* bez podkreślenia */
-    color: var(--kolorTekstu);
-    transition: color 200ms ease; /* przejście do niebieskiego koloru na :hover */
+    text-decoration: none;
+    color: #e6e6e6;
+    transition: color 200ms ease;
 }
 
 a:hover 
 {
-    color: #53678c;
+    color: #904DD5;
     text-decoration: underline;
 }
 
@@ -84,33 +72,20 @@ a img:hover
     filter: brightness(0.8);
 }
 
-.kopiuj
+::selection
 {
-    cursor: pointer;
-    color: var(--kolorTekstu);
-    text-decoration: underline;
-    transition: color 200ms ease; /* przejście do niebieskiego koloru na :hover */
+    color: #e6e6e6;
+    background-color: #FF70F7;
 }
 
-.kopiuj:hover
+#powitanie
 {
-    color: #53678c;
-}
-
-::selection /* zaznaczanie tekstu za pomocą myszki */
-{
-    color: var(--kolorTla);
-    background-color: #53678c;
-}
-
-/* ---------- pasek menu ---------- */
-
-#powitanie /* to co widzimy po wejściu na stronę kościoła */
-{
+    height: 85vh;
     display: flex;
     flex-direction: column;
     background-size: cover;
-    background-position: center;
+    background-image: url(/img/nm/bannerNM.jpg);
+    background-position: bottom center;
     background-repeat: no-repeat;
 }
 
@@ -131,13 +106,13 @@ header
     flex-direction: column;
 }
 
-#logoKZHeader /* zdjęcie, logo kościoła */
+#logoKZHeader
 {
     height: auto;
     width: clamp(120px, 12vw, 250px);
 }
 
-#adresPodLogo /* adres budynku */
+#adresPodLogo
 {
     width: 100%;
     color: #ffffff;
@@ -147,7 +122,7 @@ header
     margin-top: 8px;
 }
 
-#monitor /* monitor */
+#monitor
 {
     width: 100%;
     height: 80px;
@@ -161,15 +136,13 @@ header
 #telefon
 {
     display: none;
+    color: #222222;
 }
 
 nav a
 {
     color: #ffffff;
-    text-transform: uppercase; /* duże litery dla menu */
 }
-
-/* ---------- menu wysuwane ---------- */
 
 .menu
 {
@@ -214,7 +187,6 @@ nav a
     padding: 1rem;
     display: block;
     text-decoration: none;
-    text-transform: uppercase;
     transition: color 200ms ease;
 }
 
@@ -223,7 +195,6 @@ nav a
     padding: 1rem;
     color: #1f3152;
     display: block;
-    text-transform: uppercase;
     text-decoration: underline;
 }
 
@@ -237,8 +208,6 @@ a.jestesNaTejStronie
     text-decoration: underline !important;
 }
 
-/* ---------- banner ---------- */
-
 #banner
 {
     flex: 1;
@@ -251,40 +220,13 @@ a.jestesNaTejStronie
     min-height: calc(100vh - 80px);
 }
 
-/* ---------- przyciski ---------- */
-
-#trybyPrzycisk /* ciemny/jasny motyw */
-{ 
-    all: unset;
-    flex-shrink: 0;
-    cursor: pointer;
-    margin-top: 0.1em;
-}
-
-#trybyPrzycisk img
-{
-    height: clamp(15px, 3vw, 20px);
-}
-
-#slonce
-{
-    display: var(--trybyPrzyciskS);
-}
-
-#ksiezyc
-{
-    display: var(--trybyPrzyciskK);
-}
-
-/* ---------- stopka ---------- */
-
 footer
 {
     display: flex;
     padding: 5% 10%;
     flex-direction: row;
+    background-image: url(/img/nm/footer.png);
     justify-content: space-between;
-    background-color: var(--kolorStopki);
 }
 
 footer p
@@ -298,8 +240,6 @@ footer p
     text-align: right;
 }
 
-/* ---------- treść ---------- */
-
 .akapitTekstu
 {
     width: 100%;
@@ -307,14 +247,11 @@ footer p
     padding: 0% 10% 5% 10%;
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--kolorTla);
 }
 
-.akapitTekstu li
+.akapitTekstu a
 {
-    line-height: 1.4;
-    color: var(--kolorTekstu);
-    font-size: clamp(1rem, 3vw, 1.8rem);
+    text-decoration: underline;
 }
 
 .dwaElementy
@@ -326,11 +263,10 @@ footer p
     align-items: stretch;
     align-content: center;
     padding: 0% 10% 5% 10%;
-    background-color: var(--kolorTla);
     min-height: clamp(300px, 50vh, 600px);
 }
 
-.akapitTekstu:first-of-type, .dwaElementy:first-of-type
+.akapitTekstu:first-of-type
 {
     padding: 5% 10% 5% 10%;
 }
@@ -352,6 +288,143 @@ footer p
     display: block;
     object-fit: cover;
     transition: filter 0.3s ease;
+}
+
+.mapa
+{
+    width: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: var(--kolorTla);
+    padding: 5% 10% 5% 10%;
+}
+
+.mapa iframe
+{
+    width: 100%;
+    height: 650px;
+    border: none;
+    border-radius: 12px;
+}
+
+.sociale
+{
+    width: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0% 15% 5% 15%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    background-color: var(--kolorTla);
+    gap: clamp(10px, 2vw, 30px);
+}
+
+.sociale img
+{
+    width: 180px;
+    object-fit: contain;
+}
+
+.socialebox
+{
+    min-width: 0;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    background-color: var(--kolorTla);
+    padding-bottom: 25px;
+}
+
+.pytanie strong
+{
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.pytanie p
+{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.4s ease;
+}
+
+.pytanie p.pokaz
+{
+    max-height: 2000px;
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+.pytanie img
+{
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0px;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.4s ease;
+}
+
+.pytanie img.pokaz
+{
+    max-height: 2000px;
+    opacity: 1;
+}
+
+strong.aktywne
+{
+    color: #904DD5;
+}
+
+.kopiuj
+{
+    cursor: pointer;
+    color: #e6e6e6;
+    text-decoration: underline;
+    transition: color 200ms ease;
+}
+
+.kopiuj:hover
+{
+    color: #904DD5;
+}
+
+#pytania strong
+{
+    line-height: 2;
+}
+
+#pytania
+{
+    padding-left: 7px;
+    border-color: #e6e6e6;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: dotted;
+}
+
+.fotka
+{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fotka img
+{
+    width: 100%;
+    height: auto;
+}
+
+#rejestracjaJeszczeSieNieRozpoczela h1
+{
+    padding-top: 70px;
+    color: #2C64D2;
 }
 
 @media (max-width: 1200px)
@@ -376,6 +449,17 @@ footer p
     {
         padding: 5% 5% 5% 5%;
     }
+
+    #powitanie
+    {
+        background-image: url(/img/nm/bannerNM_tel.jpg);
+    }
+
+    #rejestracjaJeszczeSieNieRozpoczela h1
+    {
+        padding-top: 27vh;
+        color: #2C64D2;
+    }
 }
 
 @media (max-width: 1280px) and (orientation: portrait)
@@ -395,21 +479,37 @@ footer p
         flex-direction: column;
         padding: 20px 20px 15px 20px;
         border-bottom-left-radius: 20px;
-        background-color: color-mix(in srgb, var(--kolorTla) 80%, transparent);
+        background-color: color-mix(in srgb, #222222 60%, transparent);
     }
 
     #telefon a
     {
-        color: var(--kolorTekstu);
+        color: #e6e6e6;
         margin: 0px;
         padding-bottom: 5px !important;
         padding-top: 0px !important;
         display: block;
     }
+    
+    .mapa
+    {
+        padding: 5%;
+        background-color: #222222;
+    }
+
+    .mapa iframe
+    {
+        border-radius: 0px;
+    }
 
     #powitanie
     {
-        background-position: right;
+        max-height: 60vh;
+    }
+
+    #powitanie
+    {
+        background-image: url(/img/nm/bannerNM_tel.jpg);
     }
 }
 
@@ -430,21 +530,39 @@ footer p
         flex-direction: column;
         padding: 20px 20px 15px 20px;
         border-bottom-left-radius: 20px;
-        background-color: color-mix(in srgb, var(--kolorTla) 80%, transparent);
+        background-color: color-mix(in srgb, #222222 60%, transparent);
     }
 
     #telefon a
     {
-        color: var(--kolorTekstu);
+        color: #e6e6e6;
         margin: 0px;
         padding-bottom: 5px !important;
         padding-top: 0px !important;
         display: block;
     }
+    
+    #powitanie
+    {
+        height: 80vh;
+        background-position: center !important;
+    }
 
     #powitanie
     {
-        background-position: right;
+        background-image: url(/img/nm/bannerNM_tel.jpg);
+    }
+
+    .mapa
+    {
+        padding: 5%;
+        background-color: #222222;
+    }
+
+    .mapa iframe
+    {
+        border-radius: 0px;
+        height: 100vh !important;
     }
 }
 
@@ -460,5 +578,10 @@ footer p
     #stopkaPrawaStrona
     {
         text-align: left;
+    }
+
+    h4
+    {
+        letter-spacing: normal;
     }
 }

@@ -1,8 +1,11 @@
 const button = document.getElementById("trybyPrzycisk");
 
-button.addEventListener("click", () => {
-    document.body.classList.toggle("ciemny");
-});
+if (button)
+{
+    button.addEventListener("click", () => {
+        document.body.classList.toggle("ciemny");
+    });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".kopiuj").forEach(element => {
